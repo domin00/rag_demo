@@ -45,8 +45,9 @@ Once the index is built, you can search for products using the command line.
 To run a query, use:
     ```bash
     python main.py --query "your desired product description" --top_k 5
-    Replace "your desired product description" with your search query.
-    The --top_k parameter determines the number of top matching products to return (default is 5).
+
+Replace "your desired product description" with your search query.
+The --top_k parameter determines the number of top matching products to return (default is 5).
 
 The script will output the matching products along with their similarity distances.
 
