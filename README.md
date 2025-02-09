@@ -36,7 +36,7 @@ Before running any queries, you need to build the FAISS index. Make sure your pr
 
 To build the index, run:
     ```bash 
-    python main.py --build-index
+        python main.py --build-index
 
 This script reads all .txt files in the descriptions/ folder, computes embeddings using the SentenceTransformer, builds a FAISS index, and saves both the index and a mapping of index positions to product names.
 
@@ -44,7 +44,7 @@ This script reads all .txt files in the descriptions/ folder, computes embedding
 Once the index is built, you can search for products using the command line. 
 To run a query, use:
     ```bash
-    python main.py --query "your desired product description" --top_k 5
+        python main.py --query "your desired product description" --top_k 5
 
 Replace "your desired product description" with your search query.
 The --top_k parameter determines the number of top matching products to return (default is 5).
