@@ -34,16 +34,15 @@ Create and activate a virtual environment:
 ## Building the Index
 Before running any queries, you need to build the FAISS index. Make sure your product descriptions are placed in the descriptions/ folder and named as {product name}.txt.
 
-To build the index, run:
-
+**To build the index, run:**
     ```bash 
     python main.py --build-index
 
 This script reads all .txt files in the descriptions/ folder, computes embeddings using the SentenceTransformer, builds a FAISS index, and saves both the index and a mapping of index positions to product names.
 
 ## Running a Query
-Once the index is built, you can search for products using the command line. To run a query, use:
-
+Once the index is built, you can search for products using the command line. 
+**To run a query, use:**
     ```bash
     python main.py --query "your desired product description" --top_k 5
     Replace "your desired product description" with your search query.
