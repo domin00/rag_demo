@@ -18,6 +18,7 @@ This project implements a simple product retrieval system. It reads product desc
    ```bash
    git clone <repository_url>
    cd <repository_folder>
+   ```
 
 Create and activate a virtual environment:
 
@@ -25,18 +26,21 @@ Create and activate a virtual environment:
     ```bash
     python3 -m venv venv
     source venv/bin/activate
+    ```
 
 3. **Install dependencies:**
 
     ```bash
     pip install -r requirements.txt
+    ```
 
 ## Building the Index
 Before running any queries, you need to build the FAISS index. Make sure your product descriptions are placed in the descriptions/ folder and named as {product name}.txt.
 
 To build the index, run:
     ```bash 
-        python main.py --build-index
+    python main.py --build-index
+    ```
 
 This script reads all .txt files in the descriptions/ folder, computes embeddings using the SentenceTransformer, builds a FAISS index, and saves both the index and a mapping of index positions to product names.
 
@@ -44,7 +48,8 @@ This script reads all .txt files in the descriptions/ folder, computes embedding
 Once the index is built, you can search for products using the command line. 
 To run a query, use:
     ```bash
-        python main.py --query "your desired product description" --top_k 5
+    python main.py --query "your desired product description" --top_k 5
+    ```
 
 Replace "your desired product description" with your search query.
 The --top_k parameter determines the number of top matching products to return (default is 5).
@@ -56,10 +61,12 @@ The script will output the matching products along with their similarity distanc
 2. **Build the Index:**
     ```bash
     python main.py --build-index
+    ```
 
 3. **Run a Query:**
     ```bash
     python main.py --query "example query" --top_k 5
+    ```
 
 
 Happy searching!
